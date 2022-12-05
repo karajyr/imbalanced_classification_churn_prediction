@@ -1,14 +1,16 @@
 # imbalanced_classification_churn_prediction
-The purpose of this project is to: (1) develop algorithms to identify customers who are likely to churn in the future (2) analyze top factors that influence user retention (3) interpret results and give business suggestions accordingly.
+  This goal of this project is to handle the imbalanced classification problem by developing algorithms to identify customers who are likely to churn in the future, interpret results, and give business suggestions.
 
-Key take aways:
+Methods used: 
+- Handling imbalanced classfication problem by stratified sampling and **SMOTE**, which improved ~46% of model performance.
+- Chose **recall** as the most suitable metric our business case, achieving best recall of 69.74% by XGBoost
 
-- Mitigate impact of imbalanced data on classification by methods such as stratified sampling and **SMOTE**, which improved ~50% of model performance.
-- Select **recall** as the most suitable metric for this particular project, achieving best recall of 69.74% by XGBoost
-- 5 Most important factors:   
-    - **Age**: older customer are more likely to churn;  
-    -  **NumOfProducts**: churn customer tend to use more products;  
-    - **Gender**: female are more likely to churn;   
-    - **Geography**: Customer from Germany are more likely to churn;  
-    - **IsActiveMember**: Non-active members are more likely to churn.  
-- Business Suggestions: See Part 6
+5 most important factors:   
+- **Age**: older customer are more likely to churn, especially those who are non-active; opposite is true for younger customers  
+-  **NumOfProducts**: customer who used more more than 3 products are more likely to churn; customers who only used 2 products with high account balance are especially likely to churn  
+- **Gender**: females are more likely to churn; German females are less likely to churn compared to their those in Spain and France   
+- **Geography**: Customer from Germany are more likely to churn, especially those who tried more products;  
+- **IsActiveMember**: Non active members are more likely to churn; but younger active members are more likely to churn 
+  
+Business suggestions: See Part 6
+    
